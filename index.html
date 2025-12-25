@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>WoodenHome - Beautiful Wooden Furniture</title>
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HOME PAGE -->
+    <div id="homePage" class="page active">
+        <header>
+            <div class="header-content">
+                <div class="logo" onclick="showPage('homePage')">
+                    <img src="logoreal.png"><span class="logo-text">WoodenHome</span>
+               </div>
+               <nav>
+                    <a onclick="scrollToSection('home')" id="nav-home" class="active-nav">Home</a>
+                    <a onclick="showPage('productsPage');" id="nav-shop">Shop</a>
+                    <a onclick="scrollToSection('about')" id="nav-about">About</a>
+                    <a onclick="scrollToSection('contact')" id="nav-contact">Contact</a>
+                </nav>
+                <button class="shop-btn">Shop Now</button>
+            </div>
+        </header>
+
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Beautiful Wooden Furniture <span style="color: #b45309;">for Your Home</span></h1>
+                <p>Crafted with passion and style to your space</p>
+                <button class="shop-btn">Shop Now</button>
+            </div>
+            <div class="hero-image">
+                <img src="house.jpg">
+            </div>
+        </section>
+
+        <footer class="features">
+            <div class="feature-card">
+                <div class="feature-icon">📦</div>
+                <h3>Quality Craftsmanship</h3>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🚚</div>
+                <h3>Free Shipping</h3>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎧</div>
+                <h3>24/5 Support</h3>
+            </div>
+        </footer>
+          <!-- About Section -->
+            <section id="aboutSection" class="content-section">
+                <div class="about-content">
+                    <span class="about-text">
+                        <h2>🏠 About Wooden Street</h2>
+                        <br>
+                        <p>Welcome to Wooden Street, where craftsmanship meets elegance. Since 2010, we've been dedicated to creating beautiful, sustainable wooden furniture that transforms houses into homes.Our artisans use only the finest quality wood, sourced responsibly from sustainable forests. Each piece is handcrafted with attention to detail, ensuring durability and timeless beauty.
+                        We believe that furniture should tell a story – your story. That's why we offer customization options to make each piece uniquely yours.</p>
+                        <br></p>
+                       <br>
+                       <br> 
+                    </span>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contactSection" class="content-section">
+                <h2 style="text-align: center;font-size: 30px;">Get In Touch</h2>
+                <br>
+                <p style="text-align: center; margin-bottom: 20px;">We'd love to hear from you. Reach out to us through any of the following channels.</p>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <div class="icon">📍</div>
+                        <h3>Visit Us</h3>
+                        <p>123 Furniture Lane<br>Wood City, Karaikudi</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="icon">📞</div>
+                        <h3>Call Us</h3>
+                        <p>+915564567<br>Mon-Sat: 9AM - 8PM</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="icon">✉️</div>
+                        <h3>Email Us</h3>
+                        <p>our@woodenstreet.com<br>support@woodenstreet.com</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <script>
+        // Page Navigation
+        function showPage(pageId) {
+            document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+            document.getElementById(pageId).classList.add('active');
+            window.scrollTo(0, 0);
+
+            if (pageId === 'productsPage') {
+                renderCategories();
+                renderProducts('allProducts', products);
+                document.getElementById('searchInput').value = '';
+                resetFilters();
+                checkAuth();
+            }
+        }
+
+        // Scroll to section on home page
+        function scrollToSection(sectionId) {
+            setActiveNav(sectionId);
+            
+            if (sectionId === 'home') {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else {
+                const section = document.getElementById(sectionId + 'Section');
+                if (section) {
+                    section.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        }
+
+        function setActiveNav(navId) {
+            document.querySelectorAll('nav a').forEach(a => a.classList.remove('active-nav'));
+            const navElement = document.getElementById('nav-' + navId);
+            if (navElement) navElement.classList.add('active-nav');
+        }
+</script>
+    </div>
+</body>
+</html>

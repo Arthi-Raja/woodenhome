@@ -1,0 +1,221 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #78350f;
+        }
+
+        /* Header */
+        header {
+            background: white;
+            top: 0;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            gap: 10px;
+            font-size: 24px;
+            font-weight: bold;
+            height: 50px;
+            width: 60;
+            cursor: pointer;
+        }
+
+        .logo-text{
+           margin-top: 10px;
+        }
+
+        nav {
+            display: flex;
+            gap: 50px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #92400e;
+            font-weight: 500;
+            font-size: 20PX;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #b45309;
+        }
+
+        .shop-btn {
+            background: #92400e;
+            color: white;
+            padding: 12px 30px;
+            margin-left: 10%;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .shop-btn:hover {
+            background: #78350f;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: rgb(255, 219, 219);
+            max-width: 1600px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .hero-content h1 {
+            padding: 30PX;
+            font-size: 56px;
+            margin-bottom: 40px;
+            color: #78350f;
+            line-height: 1.2;
+        }
+
+        .hero-content p {
+            padding: 30px;
+            font-size: 20px;
+            margin-bottom: 30px;
+            color: #92400e;
+        }
+
+        .hero-image {
+            height: 90%;
+            width: 100%;
+        }
+
+
+        /* Features */
+        .features {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 100px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 40px;
+            border-radius: 30px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 20px;
+            color: #78350f;
+        }
+        
+        /* About Section */
+        .about-content {
+            display: block;
+            align-items: center;
+        }
+
+
+        .about-text h2 {
+            margin-bottom: 10px;
+            margin-top: 70px;
+            font-size: 34px;
+            text-align: center;
+        }
+        .about-text p{
+            margin-left: 70px;
+            font-size: 20px;
+            line-height: 40px;
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 80px;
+            margin-top: 70px;
+            margin-bottom: 40px;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .contact-card .icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .contact-card h3 {
+            color: #78350f;
+            margin-bottom: 10px;
+        }
+
+        .contact-card p {
+            font-size: 14px;
+        }
+
+
+        /* Bestsellers Section */
+        .bestsellers-section {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 0 20px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .section-header h2 {
+            font-size: 40px;
+            color: #78350f;
+        }
+
+        .view-all-btn {
+            background: transparent;
+            color: #92400e;
+            padding: 12px 30px;
+            border: 2px solid #92400e;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .view-all-btn:hover {
+            background: #92400e;
+            color: white;
+        }
